@@ -1,0 +1,101 @@
+.Tangamandapio {
+    max-width: 1000px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "firstBox secondBox secondBox thirdBox"
+        "firstBox fourthBox fiveBox thirdBox"
+        "sixthBox fourthBox fiveBox thirdBox"
+        "sixthBox seventhBox eigthBox eigthBox";
+    gap: 20px;
+}
+
+.cajita {
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#firstBox {
+    grid-area: firstBox;
+    background-color: #faeee2;
+}
+
+#secondBox {
+    grid-area: secondBox;
+    background-color: #7651dc;
+    color: #ffffff;
+}
+
+#thirdBox {
+    grid-area: thirdBox;
+    background-color: #dcd1fc;
+}
+
+#fourthBox {
+    grid-area: fourthBox;
+    background-color: #ffffff;
+}
+
+#fiveBox {
+    grid-area: fiveBox;
+    background-color: #ffcc69;
+}
+
+#sixthBox {
+    grid-area: sixthBox;
+    background-color: #ffcc69;
+}
+
+#seventhBox {
+    grid-area: seventhBox;
+    background-color: #ffffff;
+}
+
+#eigthBox {
+    grid-area: eigthBox;
+    background-color: #7651dc;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "secondBox"
+            "fourthBox"
+            "fiveBox"
+            "thirdBox"
+            "eigthBox"
+            "seventhBox"
+            "firstBox"
+            "sixthBox"; 
+    }
+
+    .cajita {
+        padding: 10px;
+    }
+
+    h1, p {
+        text-align: center;
+        font-size: 1em;
+    }
+}
